@@ -18,6 +18,9 @@ welcome :-
     writeln('  why(r15).        explain a rule after a consultation'),
     writeln('  run_all_tests.   run the test scenarios and rule unit tests'),
     writeln('  halt.            exit'),
+    nl,
+    writeln('Type a command exactly as shown, including the full stop (.), then press Enter.'),
+    writeln('If the prompt shows | instead of ?-, type . and press Enter to finish the command.'),
     nl.
 
 start :-

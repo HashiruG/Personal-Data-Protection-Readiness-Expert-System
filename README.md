@@ -67,6 +67,11 @@ From the project folder, load the system:
 swipl main.pl
 ```
 
+> **Every Prolog command must end with a full stop (`.`)**, for example
+> `server.` or `run_all_tests.`, followed by Enter. Without the full stop,
+> Prolog waits for the rest of the command and shows `|` instead of `?-`.
+> If that happens, type `.` and press Enter, then enter the command again.
+
 ### 3.1 Web interface
 
 At the Prolog prompt, start the web server:
