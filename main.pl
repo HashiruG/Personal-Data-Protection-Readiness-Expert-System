@@ -3,6 +3,7 @@
 :- ensure_loaded(engine).
 :- ensure_loaded(report).
 :- ensure_loaded(tests).
+:- ensure_loaded(web).
 
 :- initialization(welcome).
 
@@ -12,7 +13,8 @@ welcome :-
     writeln('A rule-based expert system for the Personal Data Protection Act,'),
     writeln('No. 9 of 2022 (Sri Lanka), as amended by Act, No. 22 of 2025.'),
     nl,
-    writeln('  start.           begin a consultation'),
+    writeln('  server.          start the web interface at http://localhost:8080'),
+    writeln('  start.           begin a consultation in this terminal'),
     writeln('  why(r15).        explain a rule after a consultation'),
     writeln('  run_all_tests.   run the test scenarios and rule unit tests'),
     writeln('  halt.            exit'),
