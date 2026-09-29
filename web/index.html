@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personal Data Protection Readiness Checker</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Rule-based expert system</p>
+    <h1>Personal Data Protection Act Readiness Checker</h1>
+    <p class="subtitle">Personal Data Protection Act, No. 9 of 2022 (Sri Lanka), as amended by Act, No. 22 of 2025</p>
+  </div>
+</header>
+
+<nav class="steps wrap" aria-label="Progress">
+  <ol id="steps"></ol>
+</nav>
+
+<main class="wrap">
+  <section id="error" class="error" hidden></section>
+
+  <section id="intro" class="card" hidden>
+    <h2>About this consultation</h2>
+    <p>Answer yes or no to questions about how an organisation processes personal data. The system reasons backwards from each goal, such as whether the Act applies or whether a lawful basis exists, and only asks the questions it needs.</p>
+    <p>Every conclusion in the final report shows the rule that produced it and the section of the Act it comes from.</p>
+    <ul class="keys">
+      <li><kbd>Y</kbd> Yes</li>
+      <li><kbd>N</kbd> No</li>
+      <li><kbd>W</kbd> Why is this asked?</li>
+      <li><kbd>B</kbd> Back</li>
+    </ul>
+    <button class="btn primary" id="begin">Begin consultation</button>
+  </section>
+
+  <section id="question" class="card" hidden aria-live="polite">
+    <div class="meta">
+      <span id="q-number"></span>
+      <span id="q-module"></span>
+    </div>
+    <p class="checking">Evaluating <strong id="q-rule"></strong> <span id="q-section"></span></p>
+    <h2 id="q-text" class="question-text"></h2>
+    <div class="answers">
+      <button class="btn primary" id="yes">Yes</button>
+      <button class="btn" id="no">No</button>
+    </div>
+    <div class="links">
+      <button class="link" id="why-toggle" aria-expanded="false">Why is this asked?</button>
+      <button class="link" id="back">Back</button>
+      <button class="link" id="restart">Restart</button>
+    </div>
+    <div id="why" class="why" hidden></div>
+  </section>
+
+  <section id="report" hidden></section>
+
+  <details id="history" class="history" hidden>
+    <summary>Answers given (<span id="history-count">0</span>)</summary>
+    <ol id="history-list"></ol>
+  </details>
+</main>
+
+<footer class="wrap footer">
+  <p>Educational tool, not legal advice. Assignment 2, Logic Programming and Artificial Cognitive Systems. Gunathilake K.R.H.H. (224061N)</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
