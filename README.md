@@ -57,11 +57,40 @@ or download the `.zip` file, extract it, and open a terminal in the extracted fo
 
 ## 3. Run the expert system
 
-From the project folder:
+The system has two interfaces that use the same knowledge base and inference
+engine: a **web interface** in the browser, and a **command-line interface** in
+the terminal. Both run entirely on the local machine.
+
+From the project folder, load the system:
 
 ```
 swipl main.pl
 ```
+
+### 3.1 Web interface
+
+At the Prolog prompt, start the web server:
+
+```prolog
+?- server.
+```
+
+Then open <http://localhost:8080> in a web browser and click **Begin
+consultation**.
+
+- Answer each question with **Yes** or **No** (keyboard: <kbd>Y</kbd> / <kbd>N</kbd>).
+- **Why is this asked?** (<kbd>W</kbd>) shows the rule being evaluated and its source in the Act.
+- **Back** (<kbd>B</kbd>) returns to the previous question; **Restart** starts again.
+- The report lists every rule that fired, grouped by module. **Why?** next to a
+  rule shows its conditions and the answers that made it fire.
+- Answers are kept if the page is reloaded.
+
+Keep the Prolog window open while using the browser. To stop the server, type
+`stop_server.` or `halt.` at the Prolog prompt. If port 8080 is already in use,
+start the server on another port, e.g. `server(8081).`, and open
+<http://localhost:8081>.
+
+### 3.2 Command-line interface
 
 At the Prolog prompt, start a consultation:
 
@@ -95,7 +124,8 @@ To exit Prolog:
 ```
 
 **Windows without a terminal:** open **SWI-Prolog** from the Start menu, choose
-**File > Consult...**, select `main.pl`, then type `start.` at the prompt.
+**File > Consult...**, select `main.pl`, then type `server.` or `start.` at the
+prompt.
 
 ## 4. Run the tests
 
@@ -145,7 +175,15 @@ Rule unit tests: 34 of 34 rules fire when their conditions hold.
 A gym in Colombo registers members aged 14-15 using fingerprint entry, keeps
 injury records, uses a single "I agree" box on its membership form, refuses
 membership without fingerprints and does not tell members they can withdraw
-consent. Part of the session:
+consent.
+
+**Web interface:** a question with its explanation, and the final report.
+
+![Question with explanation](docs/web-question.png)
+
+![Report](docs/web-report.png)
+
+**Command-line interface:** part of the session:
 
 ```
 Q14 [M3, R15] Is biometric data processed for the purpose of uniquely
@@ -210,7 +248,9 @@ The modules are proved in order:
 
 | File | Contents |
 |---|---|
-| `main.pl` | Command-line interface: `start/0`, questions on the terminal, `why` during questions |
+| `main.pl` | Loads the system; command-line interface: `start/0`, questions on the terminal, `why` during questions |
+| `web.pl` | Web server: serves the web interface and answers its requests using the inference engine |
+| `web/` | Web interface page (`index.html`, `style.css`, `app.js`) |
 | `rules.pl` | Knowledge base: the 34 rules, each with its source section |
 | `questions.pl` | Knowledge base: the question for each fact used in the rules |
 | `engine.pl` | Inference engine (backward chaining) and working memory |
