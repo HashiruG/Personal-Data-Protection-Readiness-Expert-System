@@ -191,15 +191,16 @@ consent.
 **Command-line interface:** part of the session:
 
 ```
-Q14 [M3, R15] Is biometric data processed for the purpose of uniquely
-  identifying a natural person (for example fingerprints or facial
-  recognition)?
+Q14 [M3, R15] Are fingerprints, face scans or other body features used to
+  identify people?
+  (e.g. fingerprint entry or face recognition)
   (yes / no / why) > why
   This answer is needed to decide rule R15 (s.56):
     IF the conditions hold THEN NOTE: Special categories of personal data
       are processed
-  Source of this question in the Act: s.56 "special categories of personal
-    data"
+  In the words of the Act (s.56 "special categories of personal data"): Is
+    biometric data processed for the purpose of uniquely identifying a
+    natural person?
   (yes / no / why) > yes
 ```
 

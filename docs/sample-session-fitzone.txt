@@ -2,144 +2,148 @@ $ swipl main.pl
 ?- start.
 
 Answer each question about the organisation's processing of personal data.
+"The organisation" is the one being assessed; "people" are the individuals
+whose data it handles (customers, members, employees and so on).
 Type yes or no (y / n), "why" to see the rule being checked, or "quit" to stop.
 
-Q1 [M1, R6] Is the personal data processed by an individual purely for
-  personal, domestic or household purposes (for example, a personal contact
-  list)?
+Q1 [M1, R6] Is the data used only by a private individual for personal or
+  family purposes?
+  (e.g. a personal phone contact list or family photos)
   (yes / no / why) > no
-Q2 [M1, R7] Does the processing involve personal data, that is,
-  information that can identify a person directly or indirectly (for example
-  a name, identification number, location data or online identifier)?
+Q2 [M1, R7] Does the organisation handle any information that can identify
+  a person?
+  (e.g. names, ID numbers, phone numbers, locations or online account IDs)
   (yes / no / why) > yes
-Q3 [M1, R1] Does the processing of personal data take place wholly or
-  partly within Sri Lanka?
+Q3 [M1, R1] Is any of the data collected, stored or used in Sri Lanka?
+  (answer yes even if only part of the handling happens in Sri Lanka)
   (yes / no / why) > yes
-Q4 [M2, R8] Have the data subjects given consent to the processing of
-  their personal data?
+Q4 [M2, R8] Have people agreed to their data being used?
+  (e.g. by signing a form or ticking an "I agree" box)
   (yes / no / why) > yes
-Q5 [M2, R9] Is the processing necessary for the performance of a contract
-  to which the data subject is a party, or to take steps at their request
-  before entering into a contract?
+Q5 [M2, R9] Is the data needed to provide a service or contract that the
+  person has signed up for or asked for?
+  (e.g. a delivery address needed to send an order)
   (yes / no / why) > no
-Q6 [M2, R10] Is the processing necessary for compliance with a legal
-  obligation to which the controller or processor is subject under any
-  written law?
+Q6 [M2, R10] Does a law require the organisation to use the data?
+  (e.g. keeping employee records for tax or EPF)
   (yes / no / why) > no
-Q7 [M2, R11] Is the processing necessary to respond to an emergency that
-  threatens the life, health or safety of the data subject or another
-  natural person?
+Q7 [M2, R11] Is the data needed to deal with an emergency that threatens
+  someone's life, health or safety?
+  (e.g. giving medical details to an ambulance crew)
   (yes / no / why) > no
-Q8 [M2, R12] Is the processing necessary for a task carried out in the
-  public interest, or in the exercise of powers, functions or duties
-  conferred on the controller or processor by written law?
+Q8 [M2, R12] Is the data needed for a task in the public interest, or for
+  duties given to the organisation by law?
+  (e.g. a government agency issuing licences, or public health work)
   (yes / no / why) > no
-Q9 [M2, R13] Is the processing necessary for the legitimate interests
-  pursued by the controller or by a third party (for example fraud
-  prevention or network and information security)?
+Q9 [M2, R13] Does the organisation need the data for a genuine purpose of
+  its own?
+  (e.g. preventing fraud or keeping IT systems secure)
   (yes / no / why) > no
-Q10 [M3, R15] Does the personal data reveal racial or ethnic origin?
+Q10 [M3, R15] Does the data show a person's race or ethnicity?
   (yes / no / why) > no
-Q11 [M3, R15] Does the personal data reveal political opinions?
+Q11 [M3, R15] Does the data show a person's political opinions?
   (yes / no / why) > no
-Q12 [M3, R15] Does the personal data reveal religious or philosophical
-  beliefs?
+Q12 [M3, R15] Does the data show a person's religion or beliefs?
   (yes / no / why) > no
-Q13 [M3, R15] Is genetic data processed?
+Q13 [M3, R15] Is genetic (DNA) data used?
+  (e.g. DNA test results)
   (yes / no / why) > no
-Q14 [M3, R15] Is biometric data processed for the purpose of uniquely
-  identifying a natural person (for example fingerprints or facial
-  recognition)?
+Q14 [M3, R15] Are fingerprints, face scans or other body features used to
+  identify people?
+  (e.g. fingerprint entry or face recognition)
   (yes / no / why) > why
   This answer is needed to decide rule R15 (s.56):
     IF the conditions hold THEN NOTE: Special categories of personal data
       are processed
-  Source of this question in the Act: s.56 "special categories of personal
-    data"
+  In the words of the Act (s.56 "special categories of personal data"): Is
+    biometric data processed for the purpose of uniquely identifying a
+    natural person?
   (yes / no / why) > yes
-Q15 [M3, R16] Have the data subjects given consent to the processing of
-  this special category data for one or more purposes specified by the
-  controller at the time of processing?
+Q15 [M3, R16] Have people agreed to this sensitive data being used for
+  purposes the organisation told them about?
+  (the purposes must be stated at the time the data is used)
   (yes / no / why) > yes
-Q16 [M3, R16] Does any other written law prohibit the processing of this
-  data notwithstanding the consent of the data subject?
+Q16 [M3, R16] Does any other law forbid using this data, even with the
+  person's agreement?
   (yes / no / why) > no
-Q17 [M3, R16] Is personal data relating to a child (a natural person below
-  the age of sixteen years) processed?
+Q17 [M3, R16] Is data about children (under 16 years old) used?
+  (e.g. members, students or customers younger than 16)
   (yes / no / why) > yes
-Q18 [M3, R16] Where the data relates to a child, has consent been given by
-  the parent or legal guardian of the child?
+Q18 [M3, R16] For children's data, has a parent or legal guardian given
+  consent?
+  (a child's own agreement is not enough)
   (yes / no / why) > no
-Q19 [M3, R17] Is the processing necessary for obligations or rights in the
-  field of employment, social security (including pension) or public health,
-  in so far as it is provided for in a written law providing appropriate
+Q19 [M3, R17] Is the sensitive data needed to meet duties under
+  employment, social security or public health laws that include safeguards?
+  (e.g. sick-leave records, pension schemes or disease control)
+  (yes / no / why) > no
+Q20 [M3, R18] Is the sensitive data needed in an emergency where the
+  person is unable to give consent?
+  (e.g. treating an unconscious patient)
+  (yes / no / why) > no
+Q21 [M3, R19] Has the person clearly made this data public themselves?
+  (e.g. a politician publicly announcing their party membership)
+  (yes / no / why) > no
+Q22 [M3, R20] Is the sensitive data needed for a court case or legal
+  claim?
+  (this includes use by a court acting in its judicial role)
+  (yes / no / why) > no
+Q23 [M3, R21] Is the sensitive data needed for a purpose set out in law or
+  for the public interest, used only as far as necessary and with
   safeguards?
+  (e.g. controlling the spread of an infectious disease)
   (yes / no / why) > no
-Q20 [M3, R18] Is the processing necessary to respond to an emergency that
-  threatens the life, health or safety of the data subject or another
-  natural person, where the data subject is physically or legally incapable
-  of giving consent?
+Q24 [M3, R22] Is the sensitive data used for medical care, diagnosis or
+  health services by a licensed health professional?
+  (e.g. a registered doctor keeping patient records)
   (yes / no / why) > no
-Q21 [M3, R19] Does the processing relate to personal data which is
-  manifestly made public by the data subject?
+Q25 [M3, R23] Is the sensitive data used for research, statistics or
+  public-interest archives, in line with the law and with safeguards?
+  (e.g. an approved university research study)
   (yes / no / why) > no
-Q22 [M3, R20] Is the processing necessary for the establishment, exercise
-  or defence of legal claims before a court, tribunal or similar forum, or
-  whenever courts are acting in their judicial capacity?
-  (yes / no / why) > no
-Q23 [M3, R21] Is the processing necessary for a purpose provided for in
-  any written law, or for the public interest (as defined in Schedule I(g)),
-  necessary and proportionate, with suitable and specific safeguards?
-  (yes / no / why) > no
-Q24 [M3, R22] Is the processing necessary for preventive or occupational
-  medicine, medical diagnosis, care or treatment, or management of
-  health-care services, and carried out by a health professional licensed or
-  authorised under written law in Sri Lanka?
-  (yes / no / why) > no
-Q25 [M3, R23] Is the processing necessary for archiving in the public
-  interest, scientific or historical research, or statistical purposes in
-  accordance with law, proportionate and with suitable and specific
-  safeguards?
-  (yes / no / why) > no
-Q26 [M4, R25] Can the controller demonstrate that each data subject has
-  consented to the processing (for example, through consent records)?
+Q26 [M4, R25] Can the organisation prove that each person gave consent?
+  (e.g. signed forms or saved records of online consent)
   (yes / no / why) > yes
-Q27 [M4, R26] Is consent given in a written declaration which also
-  concerns other matters (for example, a membership form or terms and
-  conditions)?
+Q27 [M4, R26] Is consent asked for inside a form or document that also
+  covers other things?
+  (e.g. an "I agree" box on a membership form or in terms and conditions)
   (yes / no / why) > yes
-Q28 [M4, R26] Is the request for consent clearly distinguishable from the
-  other matters, in an intelligible and easily accessible form, using clear
-  and plain language?
+Q28 [M4, R26] Is the consent request clearly separate from the rest, easy
+  to find, and in plain, simple language?
   (yes / no / why) > no
-Q29 [M4, R27] Is the performance of a contract or provision of a service
-  made conditional on consent to processing of personal data that is not
-  necessary for that contract or service?
+Q29 [M4, R27] Does the organisation refuse its service unless people agree
+  to uses of their data that the service does not need?
+  (e.g. refusing membership unless fingerprints are given, when a
+    membership card would work)
   (yes / no / why) > yes
-Q30 [M4, R28] Before giving consent, are data subjects informed that
-  consent can be withdrawn at any time?
+Q30 [M4, R28] Are people told, before they agree, that they can withdraw
+  their consent at any time?
   (yes / no / why) > no
-Q31 [M5, R29] Is the processing carried out by a Ministry or government
-  department (other than the judiciary acting in its judicial capacity)?
+Q31 [M5, R29] Is the organisation a government Ministry or government
+  department?
+  (answer no for public corporations, state-owned companies, and courts
+    acting in their judicial role)
   (yes / no / why) > no
-Q32 [M5, R30] Do the core activities of the controller or processor
-  consist of operations which, by their nature, scope or purposes, require
-  regular and systematic monitoring of data subjects?
+Q32 [M5, R30] Is regularly monitoring people a main part of what the
+  organisation does?
+  (e.g. a security company, a fitness-tracking app or a credit bureau)
   (yes / no / why) > no
-Q33 [M5, R31] Do the core activities of the controller or processor
-  consist of processing special categories of personal data?
+Q33 [M5, R31] Is handling sensitive data a main part of what the
+  organisation does?
+  (e.g. a hospital, a laboratory, or a gym that uses fingerprint entry)
   (yes / no / why) > yes
-Q34 [M5, R32] Do the core activities consist of processing which results
-  in a risk of harm affecting the rights of data subjects, based on the
-  nature of the processing and its impact on them?
+Q34 [M5, R32] Could the organisation's main use of data cause harm to
+  people's rights?
+  (consider the kind of data used and its effect on the people concerned)
   (yes / no / why) > no
-Q35 [M6, R33] Does the intended processing involve a systematic and
-  extensive evaluation of personal data or special categories of personal
-  data, including profiling (for example, credit scoring)?
+Q35 [M6, R33] Will the organisation analyse people's data in a systematic
+  and extensive way, such as profiling?
+  (e.g. credit scoring or automated screening of job applicants)
   (yes / no / why) > no
-Q36 [M6, R34] Does the intended processing involve systematic monitoring
-  of publicly accessible areas or telecommunication networks (for example,
-  CCTV covering public spaces)?
+Q36 [M6, R34] Will the organisation systematically monitor public places
+  or telecommunication networks?
+  (e.g. CCTV covering a public road, or monitoring phone or internet
+    traffic)
   (yes / no / why) > no
 ============================================================================
   PERSONAL DATA PROTECTION READINESS REPORT
@@ -218,14 +222,12 @@ Rule R16 (module M3, Sch. II(a))
   IF all of:
     - Rule R15 fires: Special categories of personal data are processed
       (FIRED)
-    - Have the data subjects given consent to the processing of this
-      special category data for one or more purposes specified by the
-      controller at the time of processing? (required: yes; answer: yes)
-    - Does any other written law prohibit the processing of this data
-      notwithstanding the consent of the data subject? (required: no;
-      answer: no)
+    - Have people agreed to this sensitive data being used for purposes
+      the organisation told them about? (required: yes; answer: yes)
+    - Does any other law forbid using this data, even with the person's
+      agreement? (required: no; answer: no)
     - at least one of:
-      - Is personal data relating to a child (a natural person below the
-        age of sixteen years) processed? (required: no; answer: yes)
-      - Where the data relates to a child, has consent been given by the
-        parent or legal guardian of the child? (required: yes; answer: no)
+      - Is data about children (under 16 years old) used? (required: no;
+        answer: yes)
+      - For children's data, has a parent or legal guardian given consent?
+        (required: yes; answer: no)
