@@ -49,8 +49,8 @@ swipl --version
 Either clone the repository:
 
 ```
-git clone https://github.com/HashiruG/Personal-Data-Protection-Rediness-Expert-System.git
-cd Personal-Data-Protection-Rediness-Expert-System
+git clone https://github.com/HashiruG/Personal-Data-Protection-Readiness-Expert-System.git
+cd Personal-Data-Protection-Readiness-Expert-System
 ```
 
 or download the `.zip` file, extract it, and open a terminal in the extracted folder.
