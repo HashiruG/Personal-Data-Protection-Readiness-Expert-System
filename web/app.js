@@ -128,13 +128,15 @@
     $("q-rule").textContent = q.rule.label;
     $("q-section").textContent = "(" + q.rule.section + ")";
     $("q-text").textContent = q.text;
+    $("q-example").textContent = q.example ? "(" + q.example + ")" : "";
+    $("q-example").hidden = !q.example;
     $("back").hidden = answers.length === 0;
     var why = $("why");
     why.hidden = true;
     why.textContent = "";
     why.appendChild(el("p", null, "This answer is needed to decide rule ", el("strong", { text: q.rule.label }), " (" + q.rule.section + "):"));
     why.appendChild(el("p", null, "IF the conditions hold THEN ", el("strong", { text: q.rule.kind_label }), ": " + q.rule.message));
-    why.appendChild(el("p", { text: "Source of this question in the Act: " + q.source }));
+    why.appendChild(el("p", null, "In the words of the Act (" + q.source + "): ", el("i", { text: q.legal })));
     $("why-toggle").setAttribute("aria-expanded", "false");
     $("yes").focus();
   }

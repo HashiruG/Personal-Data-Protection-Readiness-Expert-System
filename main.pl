@@ -29,6 +29,8 @@ start :-
     assertz(ask_hook(cli_ask)),
     nl,
     writeln('Answer each question about the organisation''s processing of personal data.'),
+    writeln('"The organisation" is the one being assessed; "people" are the individuals'),
+    writeln('whose data it handles (customers, members, employees and so on).'),
     writeln('Type yes or no (y / n), "why" to see the rule being checked, or "quit" to stop.'),
     catch(( consult_system, print_report ),
           quit,
@@ -45,6 +47,8 @@ cli_ask(Fact, Answer) :-
     nl,
     format(atom(Head), 'Q~w [~w, ~w] ', [N, ML, RL]),
     wrap_print([Head, Text], 0),
+    question_help(Fact, Example, _),
+    (   Example == '' -> true ; wrap_print(['(', Example, ')'], 2) ),
     read_answer(Fact, Answer).
 
 read_answer(Fact, Answer) :-
@@ -79,8 +83,9 @@ explain_question(Fact) :-
     current_rule(Rule),
     rule(Rule, _, _, Kind, Message, Section),
     question(Fact, _, QSection),
+    question_help(Fact, _, Legal),
     rule_label(Rule, Label),
     kind_label(Kind, KindLabel),
     wrap_print(['This answer is needed to decide rule ', Label, ' (', Section, '):'], 2),
     wrap_print(['IF the conditions hold THEN ', KindLabel, ': ', Message], 4),
-    wrap_print(['Source of this question in the Act: ', QSection], 2).
+    wrap_print(['In the words of the Act (', QSection, '): ', Legal], 2).

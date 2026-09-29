@@ -82,9 +82,11 @@ step_reply(done, _{type: "report", report: R}) :-
     report_json(R).
 
 question_json(Fact, Rule, _{fact: Fact, text: Text, source: QSection,
+                            example: Example, legal: Legal,
                             number: N, module: Module, module_title: MTitle,
                             rule: RuleJ}) :-
     question(Fact, Text, QSection),
+    question_help(Fact, Example, Legal),
     rule(Rule, Module, _, _, _, _),
     module(Module, MTitle),
     aggregate_all(count, known(_, _), Asked),

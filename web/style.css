@@ -123,6 +123,13 @@ h1 {
   font: 400 clamp(20px, 3.4vw, 24px)/1.4 var(--serif);
 }
 
+.example {
+  margin: -16px 0 24px;
+  color: var(--ink-2);
+  font-size: 15px;
+  font-style: italic;
+}
+
 .answers {
   display: flex;
   gap: 12px;
