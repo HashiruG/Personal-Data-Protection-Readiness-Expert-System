@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="790" viewBox="0 0 1180 790" font-family="Liberation Sans, Arial, Helvetica, sans-serif"><title>Backward chaining for R24</title><defs><marker id="arrow" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker><marker id="arrowstart" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#000"/></marker></defs><rect width="1180" height="790" fill="#fff"/><rect x="390" y="20" width="400" height="62" rx="12" ry="12" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="590.0" y="46.8" font-size="14" font-weight="bold" font-style="normal" text-anchor="middle" fill="#000">Goal: R24 (s.5(b))</text>
+<text x="590.0" y="65.0" font-size="14" font-weight="normal" font-style="normal" text-anchor="middle" fill="#000">No Schedule II condition is met</text>
+<text x="780" y="38" font-size="12" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">FIRES</text>
+<rect x="568" y="93" width="44" height="22" rx="11" fill="#000"/>
+<text x="590" y="108.5" font-size="11" font-weight="bold" font-style="normal" text-anchor="middle" fill="#fff">AND</text>
+<path d="M590 82 V93" fill="none" stroke="#000" stroke-width="1.4"/>
+<path d="M590 115 V126 H300 V150" fill="none" stroke="#000" stroke-width="1.4" marker-end="url(#arrow)"/>
+<path d="M590 126 H860 V150" fill="none" stroke="#000" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="160" y="150" width="280" height="56" rx="12" ry="12" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="300.0" y="173.8" font-size="14" font-weight="bold" font-style="normal" text-anchor="middle" fill="#000">R15 (s.56)</text>
+<text x="300.0" y="192.0" font-size="14" font-weight="normal" font-style="normal" text-anchor="middle" fill="#000">special category data present</text>
+<text x="430" y="168" font-size="12" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">FIRES</text>
+<rect x="700" y="150" width="320" height="56" rx="12" ry="12" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="860.0" y="173.8" font-size="14" font-weight="bold" font-style="normal" text-anchor="middle" fill="#000">None of R16-R23 fire</text>
+<text x="860.0" y="192.0" font-size="14" font-weight="normal" font-style="normal" text-anchor="middle" fill="#000">(Schedule II conditions)</text>
+<text x="1010" y="168" font-size="12" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">HOLDS</text>
+<rect x="278" y="217" width="44" height="22" rx="11" fill="#000"/>
+<text x="300" y="232.5" font-size="11" font-weight="bold" font-style="normal" text-anchor="middle" fill="#fff">OR</text>
+<path d="M300 206 V217" fill="none" stroke="#000" stroke-width="1.4"/>
+<path d="M300 239 V463 H330" fill="none" stroke="#000" stroke-width="1.4"/>
+<path d="M300 279 H330" fill="none" stroke="#000" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="330" y="262" width="250" height="34" rx="0" ry="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="340" y="284.0" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">racial or ethnic origin</text>
+<text x="570" y="284.0" font-size="13" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">no</text>
+<path d="M300 325 H330" fill="none" stroke="#000" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="330" y="308" width="250" height="34" rx="0" ry="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="340" y="330.0" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">political opinions</text>
+<text x="570" y="330.0" font-size="13" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">no</text>
+<path d="M300 371 H330" fill="none" stroke="#000" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="330" y="354" width="250" height="34" rx="0" ry="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="340" y="376.0" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">religious beliefs</text>
+<text x="570" y="376.0" font-size="13" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">no</text>
+<path d="M300 417 H330" fill="none" stroke="#000" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="330" y="400" width="250" height="34" rx="0" ry="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="340" y="422.0" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">genetic data</text>
+<text x="570" y="422.0" font-size="13" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">no</text>
+<path d="M300 463 H330" fill="none" stroke="#000" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="330" y="446" width="250" height="34" rx="0" ry="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="340" y="468.0" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">biometric data</text>
+<text x="570" y="468.0" font-size="13" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">yes</text>
+<rect x="330" y="492" width="250" height="50" rx="0" ry="0" fill="#fff" stroke="#000" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="340" y="512" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">health, sex life, criminal, child</text>
+<text x="340" y="530" font-size="13" font-weight="normal" font-style="italic" text-anchor="start" fill="#000">not needed to prove R15</text>
+<path d="M300 517 H330" fill="none" stroke="#000" stroke-width="1.4" marker-end="url(#arrow)" stroke-dasharray="6 4"/>
+<path d="M300 463 V517" fill="none" stroke="#000" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="40" y="468" font-size="12.5" font-weight="normal" font-style="italic" text-anchor="start" fill="#000">R15 proved: stop</text>
+<text x="40" y="484" font-size="12.5" font-weight="normal" font-style="italic" text-anchor="start" fill="#000">(first true branch)</text>
+<rect x="838" y="217" width="44" height="22" rx="11" fill="#000"/>
+<text x="860" y="232.5" font-size="11" font-weight="bold" font-style="normal" text-anchor="middle" fill="#fff">AND</text>
+<path d="M860 206 V217" fill="none" stroke="#000" stroke-width="1.4"/>
+<path d="M860 239 V252 H760 V268" fill="none" stroke="#000" stroke-width="1.4" marker-end="url(#arrow)"/>
+<path d="M860 252 H1010 V620" fill="none" stroke="#000" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="610" y="268" width="300" height="56" rx="12" ry="12" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="760.0" y="291.79999999999995" font-size="14" font-weight="bold" font-style="normal" text-anchor="middle" fill="#000">R16 (Sch. II(a))</text>
+<text x="760.0" y="309.99999999999994" font-size="14" font-weight="normal" font-style="normal" text-anchor="middle" fill="#000">consent to specified purposes</text>
+<text x="900" y="286" font-size="12" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">FAILS</text>
+<rect x="738" y="335" width="44" height="22" rx="11" fill="#000"/>
+<text x="760" y="350.5" font-size="11" font-weight="bold" font-style="normal" text-anchor="middle" fill="#fff">AND</text>
+<path d="M760 324 V335" fill="none" stroke="#000" stroke-width="1.4"/>
+<path d="M640 357 V564" fill="none" stroke="#000" stroke-width="1.4"/>
+<path d="M640 357 H760 V357" fill="none" stroke="#000" stroke-width="1.4"/>
+<path d="M640 397 H660" fill="none" stroke="#000" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="660" y="380" width="280" height="34" rx="0" ry="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="670" y="402.0" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">R15 fires</text>
+<text x="930" y="402.0" font-size="13" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">reused</text>
+<path d="M640 443 H660" fill="none" stroke="#000" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="660" y="426" width="280" height="34" rx="0" ry="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="670" y="448.0" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">special consent</text>
+<text x="930" y="448.0" font-size="13" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">yes</text>
+<path d="M640 489 H660" fill="none" stroke="#000" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="660" y="472" width="280" height="34" rx="0" ry="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="670" y="494.0" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">written law prohibits</text>
+<text x="930" y="494.0" font-size="13" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">no</text>
+<rect x="660" y="518" width="280" height="92" rx="0" ry="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="670" y="538" font-size="13" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">no child data  OR  parental consent</text>
+<rect x="675" y="548" width="250" height="26" rx="0" ry="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="685" y="566.0" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">child data</text>
+<text x="915" y="566.0" font-size="13" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">yes</text>
+<rect x="675" y="578" width="250" height="26" rx="0" ry="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="685" y="596.0" font-size="13" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">parental consent</text>
+<text x="915" y="596.0" font-size="13" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">no</text>
+<path d="M640 564 H660" fill="none" stroke="#000" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="900" y="620" width="250" height="56" rx="12" ry="12" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1025.0" y="643.8" font-size="14" font-weight="bold" font-style="normal" text-anchor="middle" fill="#000">R17-R23 (Sch. II(b)-(h))</text>
+<text x="1025.0" y="662.0" font-size="14" font-weight="normal" font-style="normal" text-anchor="middle" fill="#000">one fact each, answered no</text>
+<text x="1140" y="638" font-size="12" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">FAIL</text>
+<text x="40" y="700" font-size="13" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">Legend</text>
+<rect x="40" y="712" width="110" height="30" rx="10" ry="10" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="95.0" y="731.2" font-size="12" font-weight="bold" font-style="normal" text-anchor="middle" fill="#000">Rule (goal)</text>
+<rect x="165" y="712" width="150" height="30" rx="0" ry="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="240.0" y="731.2" font-size="12" font-weight="normal" font-style="normal" text-anchor="middle" fill="#000">Fact asked of user</text>
+<rect x="330" y="712" width="170" height="30" rx="0" ry="0" fill="#fff" stroke="#000" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="415.0" y="731.2" font-size="12" font-weight="normal" font-style="normal" text-anchor="middle" fill="#000">Not asked (not needed)</text>
+<rect x="518" y="716" width="44" height="22" rx="11" fill="#000"/>
+<text x="540" y="731.5" font-size="11" font-weight="bold" font-style="normal" text-anchor="middle" fill="#fff">AND</text>
+<text x="568" y="731" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">all conditions must hold</text>
+<rect x="738" y="716" width="44" height="22" rx="11" fill="#000"/>
+<text x="760" y="731.5" font-size="11" font-weight="bold" font-style="normal" text-anchor="middle" fill="#fff">OR</text>
+<text x="788" y="731" font-size="12" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">first condition that holds is enough</text>
+<text x="40" y="772" font-size="12.5" font-weight="normal" font-style="italic" text-anchor="start" fill="#000">Answers from the FitZone scenario. Each question is asked only when a rule needs it, and each answer is stored and reused.</text></svg>
