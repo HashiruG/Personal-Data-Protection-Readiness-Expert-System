@@ -236,6 +236,8 @@ memory, so no question is asked twice. Questions are only asked when a rule
 needs them: for example, once biometric data is confirmed, rule R15 is proved
 and the remaining special category questions are skipped.
 
+![System architecture](docs/diagrams/architecture.png)
+
 The modules are proved in order:
 
 1. **M1** Does the Act apply? If not, the consultation stops.
@@ -245,6 +247,16 @@ The modules are proved in order:
 5. **M5** Data Protection Officer.
 6. **M6** Impact assessment.
 7. Report.
+
+![Consultation flow](docs/diagrams/consultation-flow.png)
+
+The goal tree below shows how rule R24 is proved for the FitZone scenario.
+R15 is proved as soon as biometric data is confirmed, so the remaining special
+category questions are not asked; the result of R15 is then reused by R16.
+
+![Backward chaining for R24](docs/diagrams/inference-tree.png)
+
+The diagram sources (SVG) are in [`docs/diagrams`](docs/diagrams).
 
 | File | Contents |
 |---|---|
