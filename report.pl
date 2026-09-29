@@ -43,23 +43,22 @@ kind_label(issue,       'ISSUE').
 kind_label(required,    'REQUIRED').
 kind_label(may_require, 'MAY APPLY').
 
-module_conclusion(m1, _) :-
+module_conclusion(M, Rules) :-
+    (   module_note(M, Rules, Text)
+    ->  (   M == m1
+        ->  wrap_print(['=> ', Text], 2)
+        ;   wrap_print([Text], 2)
+        )
+    ;   true
+    ).
+
+module_note(m1, _, Text) :-
     outcome(Outcome),
-    outcome_text(Outcome, Text),
-    wrap_print(['=> ', Text], 2).
-module_conclusion(m2, _).
-module_conclusion(m3, []) :- !,
-    wrap_print(['No special categories of personal data identified.'], 2).
-module_conclusion(m3, _).
-module_conclusion(m4, []) :- !,
-    wrap_print(['All Schedule III conditions for valid consent are met.'], 2).
-module_conclusion(m4, _).
-module_conclusion(m5, []) :- !,
-    wrap_print(['No Data Protection Officer requirement identified.'], 2).
-module_conclusion(m5, _).
-module_conclusion(m6, []) :- !,
-    wrap_print(['No impact assessment requirement identified.'], 2).
-module_conclusion(m6, _).
+    outcome_text(Outcome, Text).
+module_note(m3, [], 'No special categories of personal data identified.').
+module_note(m4, [], 'All Schedule III conditions for valid consent are met.').
+module_note(m5, [], 'No Data Protection Officer requirement identified.').
+module_note(m6, [], 'No impact assessment requirement identified.').
 
 outcome_text(applies,
     'The Act applies to this processing. The remaining modules were evaluated.').
@@ -91,14 +90,12 @@ count_kind(Kind, N) :-
 
 print_disclaimer :-
     nl,
-    wrap_print(['DISCLAIMER: This is an educational tool and not legal advice. ',
-                'Except for the provisions already in operation, the Act comes into ',
-                'operation on a date appointed by the Minister by Order published ',
-                'in the Gazette (s.1(3), as amended). Thresholds "as may be ',
-                'prescribed" have not yet been prescribed; results marked MAY APPLY ',
-                'depend on them.'], 0),
+    disclaimer_text(Text),
+    wrap_print([Text], 0),
     rule_line('='),
     writeln('Type why(r15). (any rule id) to see why a rule fired or did not fire.').
+
+disclaimer_text('DISCLAIMER: This is an educational tool and not legal advice. Except for the provisions already in operation, the Act comes into operation on a date appointed by the Minister by Order published in the Gazette (s.1(3), as amended). Thresholds "as may be prescribed" have not yet been prescribed; results marked MAY APPLY depend on them.').
 
 why(Rule) :-
     (   rule(Rule, M, Conditions, Kind, Message, Section)

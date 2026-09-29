@@ -1,4 +1,4 @@
-:- dynamic known/2, evaluated/2, module_status/2, outcome/1, ask_hook/1.
+:- thread_local known/2, evaluated/2, module_status/2, outcome/1, ask_hook/1.
 
 reset_session :-
     retractall(known(_, _)),
